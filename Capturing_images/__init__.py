@@ -1,0 +1,1 @@
+from capture_from_webcam import Camera_capture

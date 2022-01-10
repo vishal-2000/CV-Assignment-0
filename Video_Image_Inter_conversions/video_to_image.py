@@ -23,6 +23,22 @@ class Video:
         self.video.release()
         self.video = cv2.VideoCapture(video_file_path)
 
+    def convert_to_images_and_return(self):
+        counter = 0
+        img_array = []
+        while(self.video.isOpened()):
+            ret, frame = self.video.read()
+            if ret == False:
+                print("Video stream ended! (or probably an error?)")
+                break
+            
+            img_array.append(frame)
+            counter += 1
+
+        self.video.release()
+        self.video = cv2.VideoCapture(video_file_path)
+        return img_array
+
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Video to Image options')
     parser.add_argument('-v', '--video_path', help='Specify the absolute path to the video file that is to be converted to images', required=True)
