@@ -30,6 +30,7 @@ class Images:
         vid_writer = cv2.VideoWriter(video_file_path, cv2.VideoWriter_fourcc(*'mp4v'), fps=int(fps), frameSize=size)
         print("Video file created and written!")
         for i in image_array:
+            print(i)
             vid_writer.write(i)
         vid_writer.release()
 
