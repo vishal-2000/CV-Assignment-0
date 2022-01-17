@@ -4,7 +4,8 @@ Chroma keying, face detection and shot detection
 2. Converting a set of images into a video file - **done**
 3. Capturing images via webcam or any external cam - **done**
 4. Capturing video via webcam or any external cam (optional) - 
-5. Chroma keying - 
+5. Chroma keying (holdout matting (vlahos assumption not added yet)) - **done**
+6. Shot detection (on spiderman 3's Peter Parker dance video - perfect!) - **done**
 
 ## Resources
 1. Chroma keying
